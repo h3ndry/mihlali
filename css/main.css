@@ -1,0 +1,135 @@
+:root {
+  --color-pri: #267e78;
+  --font-pri: Roboto, Arial, Helvetica, sans-serif;
+  --font-sec: Playball;
+  --color-bg: #f7f7f7;
+  --color-black: #313131;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-pri);
+}
+
+.container {
+  font-size: 1.6em;
+  display: -ms-grid;
+  display: grid;
+  background-color: var(--color-bg);
+  -ms-grid-rows: 4rem 16rem 4rem minmax(8rem, 31vh) (min-content)[4];
+      grid-template-rows: 4rem 16rem 4rem minmax(8rem, 31vh) repeat(4, -webkit-min-content);
+      grid-template-rows: 4rem 16rem 4rem minmax(8rem, 31vh) repeat(4, min-content);
+  -ms-grid-columns: minmax(4rem, 1fr) ([col-start] minmax(min-content, 10rem) [col-end])[10] minmax(4rem, 1fr);
+      grid-template-columns: minmax(4rem, 1fr) repeat(10, [col-start] minmax(-webkit-min-content, 10rem) [col-end]) minmax(4rem, 1fr);
+      grid-template-columns: minmax(4rem, 1fr) repeat(10, [col-start] minmax(min-content, 10rem) [col-end]) minmax(4rem, 1fr);
+}
+
+.name {
+  grid-column: col-start / col-end 3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--color-pri);
+  letter-spacing: .3rem;
+  font-weight: 700;
+}
+
+.about {
+  grid-column: col-start 9 / col-end 10;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.hero-big {
+  grid-column: col-start / col-end 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / 5;
+}
+
+.hero-big__img {
+  width: 110%;
+}
+
+.hero-sm {
+  grid-column: col-start 5 / col-end 10;
+}
+
+.bg-1 {
+  background-image: url(../img/hero-1.jpg);
+  background-position: 30% 35%;
+}
+
+.bg-2 {
+  background-image: url(../img/hero-2.jpg);
+  background-position: 26% 45%;
+}
+
+.bg-3 {
+  background-image: url(../img/hero-3.jpg);
+  background-position: 53% 42%;
+}
+
+.page-nav {
+  margin-top: 1rem;
+  grid-column: col-start 5 / col-end 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page-nav__icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.btn-prev,
+.btn-next {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn-next p {
+  margin-right: 1rem;
+}
+
+.btn-prev p {
+  margin-left: 1rem;
+}
+
+.hero-text {
+  grid-column: col-start 5 / col-end 10;
+  font-family: var(--font-sec);
+  font-size: 2rem;
+}
+
+.hero-text svg {
+  width: 2rem;
+  height: 2rem;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+/*# sourceMappingURL=main.css.map */
